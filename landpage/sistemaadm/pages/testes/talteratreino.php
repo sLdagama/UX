@@ -2,7 +2,6 @@
     include('tbanco.php');
 
     $id = $_POST['id'];
-    $nome_treino = $_POST['nometreino'];
     $nome_exercicio = $_POST['exercicio'];
     $descricao = $_POST['descricao'];
     $execucao = $_POST['execucao'];

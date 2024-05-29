@@ -1,5 +1,5 @@
 <?php
- $conexao = new mysqli('localhost','root','','dbacademia');
+ $conexao = new mysqli('localhost','root','','dbacademiaux');
 
 if(mysqli_connect_errno()){
     trigger_error(mysqli_connect_error());

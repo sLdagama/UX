@@ -179,6 +179,7 @@
                                 <th>Séries</th>
                                 <th>Execuções</th>
                                 <th>Intervalo(s)</th>
+                                <th>Ações</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -208,8 +209,9 @@
                                         echo '<td>'.$linha['descricao'].'</td>';
                                         echo '<td>'.$linha['series'].'</td>';
                                         echo '<td>'.$linha['repeticoes'].'</td>';
-                                        echo '<td>'.$linha['intervalo'].'</td>
-                                        </tr>';
+                                        echo '<td>'.$linha['intervalo'].'</td>';
+                                        echo '<td>
+                                    <a class="btn btn-sm btn-info" href="frmalteratreino.php?id='.$linha['codexercicio'].'"><i class="fa fa-edit"></i>Editar</a></tr>';
                                     }
                                     } else {
                                         echo 

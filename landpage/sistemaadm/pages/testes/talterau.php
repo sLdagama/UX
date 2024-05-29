@@ -6,10 +6,10 @@
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $telefone = $_POST['telefone'];
-    $codexercicio = $_POST['codexercicio'];
+    $codtreino = $_POST['treino'];
     $foto = file_get_contents($_FILES['img']['tmp_name']);
     $foto_base = base64_encode($foto);
-    $sql = "UPDATE tbusuario set nome_usuario = '$nome', senha_usuario = '$senha', foto_usuario = '$foto_base', email = '$email', telefone = '$telefone', codexercicio = '$codexercicio' where codusu = '$id'";
+    $sql = "UPDATE tbusuario set nome_usuario = '$nome', senha_usuario = '$senha', foto_usuario = '$foto_base', email = '$email', telefone = '$telefone', codtreino = '$codtreino' where codusu = '$id'";
     
     $consulta = $conexao->query($sql);  
 

@@ -15,7 +15,7 @@
 
     if ($consulta->num_rows > 0) {
         while ($linha=$consulta->fetch_array(MYSQLI_ASSOC)) {
-            $nome_treino = $linha['nome_treino'];
+            
             $nome_exercicio = $linha['nome_exercicio'];
             $descricao = $linha['descricao'];
            $execucao = $linha['repeticoes'];
@@ -186,8 +186,6 @@
                     <form class="forms-sample" action="../testes/talteratreino.php" method="POST" enctype="multipart/form-data">
                       <div class="form-group">
                         <input type="hidden" value="<?php echo $id;?>" name="id" id="id">
-                        <label for="exampleInputName1">Nome do Treino</label>
-                        <input type="text" value="<?php echo $nome_treino?>"class="form-control" id="nometreino" name="nometreino" placeholder="Insira o nome do treino" >
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Nome do Exercício</label>

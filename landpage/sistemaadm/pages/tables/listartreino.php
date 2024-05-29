@@ -149,7 +149,7 @@
 
 										?>
                     <li class="nav-item dropdown d-none d-lg-block">
-                <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" href="frmcadtreinousu.php?id=<?php echo $id?>">Cadastrar Treino ao usuário</a>  
+                      
               <nav aria-label="breadcrumb">
                       
               </nav>

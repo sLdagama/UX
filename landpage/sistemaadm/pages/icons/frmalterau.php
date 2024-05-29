@@ -20,7 +20,7 @@ if(!isset($_SESSION['login'])) {
             $email = $linha['email'];
             $senha = $linha['senha_usuario']; 
             $telefone = $linha['telefone'];
-            $treino = $linha['codexercicio'];
+            
         }
     } else {
         header('Location: usuarios.php');
@@ -213,19 +213,19 @@ if(!isset($_SESSION['login'])) {
                       </div>
                       <div class="form-group">
                         <label for="exampleSelectGender">Treino</label> 
-                        <select id="codexercicio" name="codexercicio" class="form-control">
-                        <?php
+                        <select id="treino" name="treino" class="form-control" id="exampleSelectGender">
+                          <?php
                             include('../testes/tbanco.php');
 														  
                             //criar sql de consulta
-                            $sql = "select nome_exercicio, codexercicio from tbexercicio";
+                            $sql = "select codtreino, tipo_treino from tbtreino";
                             $consulta = $conexao->query($sql);
                             if ($consulta == true){
                                 //verifica se encontrou pelo menos uma linha
                                 if($consulta->num_rows > 0){
                                    //recebendo valor da consulta 
                                    while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
-                                         echo '<option value="'.$linha['codexercicio'].'">'.$linha['nome_exercicio'].'</option>';
+                                         echo '<option value="'.$linha['codtreino'].'">'.$linha['tipo_treino'].'</option>';
                                    }
                                 }
                             }
